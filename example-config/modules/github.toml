@@ -1,5 +1,6 @@
 [module.github]
 # Every module has a type which defines the implementation to use. Ex wlan, script, text, tray, date, etc.
+# text is the default module type so it's usually not specified explicitly
 type = "internal/text"
 # Modules define their content which is the output of the module
 content = "${prefix} ${notifications}"
@@ -8,7 +9,7 @@ on.click-left = "exec ~/scripts/github/open-notifications.sh" # TODO:
 
 # Modules can be nested. Since the output is a string, using ${prefix} in any module will simply be the output of this module
 prefix.content = ""
-prefix.style.font = 2
+prefix.style.font = "${~fonts.icons}"
 
 # Same as doing notifications.type, notifications.format, etc. but nice TOML syntax
 [module.github.notifications]
