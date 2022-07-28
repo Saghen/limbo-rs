@@ -5,7 +5,7 @@ type = "internal/text"
 # Modules define their content which is the output of the module
 content = "${prefix} ${notifications}"
 # Modules may define event handlers
-on.click-left = "exec ~/scripts/github/open-notifications.sh" # TODO:
+on.click-left = "~/scripts/github/open-notifications.sh" # TODO:
 
 # Modules can be nested. Since the output is a string, using ${prefix} in any module will simply be the output of this module
 prefix.content = ""

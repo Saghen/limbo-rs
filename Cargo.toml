@@ -10,6 +10,8 @@ gio = "0.15.12"
 gtk = { version = "0.4.8", package = "gtk4", features = ["v4_6"] }
 glib = "0.15.12"
 toml = "0.5.9"
+serde = { version = "1.0.140", features = ["derive"] }
+csscolorparser = { version = "0.6.2", features = ["serde"] }
 nom = "7.1.1"
 async-process = "1.4.0"
 pango = { version = "0.15.10", features=["v1_50"] }

@@ -5,8 +5,8 @@ sink = "alsa_output.pci-0000_12_00.3.analog-stereo"
 update.interval = 5
 
 volume.content = ["", "", ""]
-volume.style.foreground = "${colors.flamingo}"
-volume.style.background = "${colors.background-alt}"
+volume.style.foreground = "${~colors.flamingo}"
+volume.style.background = "${~colors.background-alt}"
 muted.content = ""
-muted.style.foreground = "${colors.red}"
-muted.style.background = "${colors.background-alt}"
+muted.style.foreground = "${~colors.red}"
+muted.style.background = "${~colors.background-alt}"

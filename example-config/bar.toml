@@ -5,43 +5,47 @@ include = [
 
 [bar]
 monitor = "${~env.MONITOR}"
+# Enables pseudo-transparency for the bar
+# If set to true the bar can be transparent without a compositor.
+pseudo_transparency = false
+wm_restack = "bspwm"
+side = "top"
 
 [bar.layout]
-side = "top"
 width = "100%"
-height = 30
-offset-x = "0%"
-offset-y = "0%"
-wm-restack = "bspwm"
-margin = { bottom = 0, top = 0 }
+height = "30px"
+offset = { x = "0%", y = "0%" }
+margin = { bottom = "0pt", top = "0pt" }
 
 [bar.modules]
-start = "gap-small workspaces windows r1"
-center = "l1 music r1"
-end = """
-  l1
-  twitch-moon
-  github gap
-  package-updates gap
-  notifications gap
-  song-recognition gap
-  update-wallpaper gap
-  hue gap
-  audio gap
-  internet gap
-  pomodoro gap
-  date gap-small
-"""
+start = ["gap-small", "workspaces", "windows", "r1"]
+middle = ["l1", "music", "r1"]
+end = [
+  "l1",
+  "twitch-moon",
+  "github", "gap",
+  "package-updates", "gap",
+  "notifications", "gap",
+  "song-recognition", "gap",
+  "update-wallpaper", "gap",
+  "hue", "gap",
+  "audio", "gap",
+  "internet", "gap",
+  "pomodoro", "gap",
+  "date", "gap-small"
+]
+# style.background = "${~colors.background-alt}"
+style.background = "#fff"
 
 [bar.style]
-foreground = "${colors.foreground}"
-background = "${colors.background}"
-border-color = "${colors.background}"
+foreground = "#fff"
+background = "rgb(0, 0, 0)"
+border-color = "hsl(180, 50, 20)"
+# foreground = "${~colors.foreground}"
+# background = "${~colors.background}"
+# border-color = "${~colors.background}"
 border-size = 0
 border-radius = 0
 line-height = 4
 line-size = 3
 line-color = "#ffffff"
-# Enables pseudo-transparency for the bar
-# If set to true the bar can be transparent without a compositor.
-pseudo-transparency = false

@@ -1,8 +1,8 @@
 [module.notifications]
 content = { "false": "", "true": "" }
 content.switch = "exec dunstctl is-paused"
-style.foreground = "${colors.red}"
-style.background = "${colors.background-alt}"
+style.foreground = "${~colors.red}"
+style.background = "${~colors.background-alt}"
 
 on.click-left = "dunstctl set-paused toggle"
 update.on.click-left = true

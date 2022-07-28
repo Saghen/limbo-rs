@@ -8,8 +8,8 @@ style.foreground = "${~colors.foreground}"
 style.background = "${~colors.background-alt}"
 
 update.interval = 20
-on.click-left = "open-stream-mpv ${name}"
-on.click-right = "open-stream ${name}"
+on.click-left = "${~dirs.scripts}/open-stream-mpv.sh ${name}"
+on.click-right = "${~dirs.scripts}/open-stream.sh ${name}"
 
 [module.twitch-moon]
 inherit = "twitch"

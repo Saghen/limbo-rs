@@ -1,9 +1,9 @@
 [module.package-updates]
-format = "${prefix} ${num-of-updates}"
+content = "${prefix} ${num-of-updates}"
 style.foreground = "${~colors.foreground}"
 style.background = "${~colors.background-alt}"
 update.interval = 60
-on.click-left = "exec open-term yay -Syyu"
+on.click-left = "open-term yay -Syyu"
 
 num-of-updates = "exec ${~dirs.scripts}/get-pacman-updates.sh"
 

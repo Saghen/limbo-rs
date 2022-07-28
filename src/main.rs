@@ -3,9 +3,11 @@ extern crate glib;
 extern crate gtk;
 extern crate pango;
 extern crate toml;
+extern crate serde;
 
 mod config;
 
+use config::config::load_from_file;
 use gtk::{prelude::*, Application, ApplicationWindow, CenterBox, Label, Orientation};
 use pango::{AttrInt, AttrList, Attribute, Weight};
 use std::fs;
@@ -15,18 +17,12 @@ use toml::Value;
 const APP_ID: &str = "org.saghen.limbo";
 
 fn main() {
-    let config_raw = fs::read("example-config.toml").expect("Unable to find config file");
-    let config_str =
-        std::str::from_utf8(&config_raw).expect("Config must be only utf-8 characters");
-    let config = config_str
-        .parse::<Value>()
-        .expect("Failed to parse config file");
+    let config = load_from_file("example-config/bar.toml").unwrap();
+    println!("{:?}", config);
 
-    println!("{}", config["wm"]);
-
-    let app = Application::builder().application_id(APP_ID).build();
-    app.connect_activate(build_ui);
-    app.run();
+    // let app = Application::builder().application_id(APP_ID).build();
+    // app.connect_activate(build_ui);
+    // app.run();
 }
 
 fn build_ui(app: &Application) {

@@ -4,6 +4,6 @@ style.foreground = "${~colors.yellow}"
 style.background = "${~colors.background-alt}"
 
 enable-scene = "${~dirs.scripts}/hue/enable-scene.sh"
-on.click-left = 'exec ${enable-scene} "Night Time"'
-on.click-middle = 'exec ${enable-scene} "Main"'
-on.click-right = 'exec ${enable-scene} "Morning"'
+on.click-left = '${enable-scene} "Night Time"'
+on.click-middle = '${enable-scene} "Main"'
+on.click-right = '${enable-scene} "Morning"'

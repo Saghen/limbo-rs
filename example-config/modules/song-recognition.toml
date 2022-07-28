@@ -5,8 +5,8 @@ type = "custom/script"
 exec = "~/scripts/polybar/songrec/stop.sh /tmp/songrec.status && tail -f -n 1 /tmp/songrec.status"
 tail = true
 
-on.click-left = "~/scripts/polybar/songrec/start.sh /tmp/songrec.status"
-on.click-right = "~/scripts/polybar/songrec/stop.sh /tmp/songrec.status"
+on.click-left = "${~dirs.scripts}/songrec/start.sh /tmp/songrec.status"
+on.click-right = "${~dirs.scripts}/songrec/stop.sh /tmp/songrec.status"
 
-format-foreground = "${colors.teal}"
-format-background = "${colors.background-alt}"
+format-foreground = "${~colors.teal}"
+format-background = "${~colors.background-alt}"

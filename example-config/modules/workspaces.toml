@@ -1,20 +1,20 @@
 [module.workspaces]
 type = "internal/bspwm"
 
-style.background = "${colors.background-alt}"
+style.background = "${~colors.background-alt}"
 layout.padding = 1
 
 empty.content = ""
-empty.style.foreground = "${colors.foreground}"
+empty.style.foreground = "${~colors.foreground}"
 
 occupied.content = ""
-occupied.style.foreground = "${colors.accent}"
+occupied.style.foreground = "${~colors.accent}"
 
 urgent.content = ""
-urgent.style.foreground = "${colors.yellow}"
+urgent.style.foreground = "${~colors.yellow}"
 
 focused.content = ""
-focused.style.foreground = "${colors.accent}"
+focused.style.foreground = "${~colors.accent}"
 
 dimmed-focused.content = ""
-dimmed-focused.style.foreground = "${colors.foreground}"
+dimmed-focused.style.foreground = "${~colors.foreground}"
