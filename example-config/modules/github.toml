@@ -1,0 +1,19 @@
+[module.github]
+# Every module has a type which defines the implementation to use. Ex wlan, script, text, tray, date, etc.
+type = "internal/text"
+# Modules define their content which is the output of the module
+content = "${prefix} ${notifications}"
+# Modules may define event handlers
+on.click-left = "exec ~/scripts/github/open-notifications.sh" # TODO:
+
+# Modules can be nested. Since the output is a string, using ${prefix} in any module will simply be the output of this module
+prefix.content = ""
+prefix.style.font = 2
+
+# Same as doing notifications.type, notifications.format, etc. but nice TOML syntax
+[module.github.notifications]
+content = "exec ${~dirs.scripts}/get-notification-count.sh"
+style.foreground = "${~colors.foreground}"
+style.background = "${~colors.background-alt}"
+# Define when to update. This would poll every 60s but you could also do update.on.click-left for example
+update.interval = 60

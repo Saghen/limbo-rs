@@ -1,0 +1,27 @@
+[module.music]
+content = "${playing-status} ${song-title} - ${song-artist} ${volume}"
+
+playing-status.content = { Playing: "", _: "" }
+playing-status.content.switch = "exec playerctl --player=spotify,ncspot status"
+playing-status.style.foreground = "${~colors.accent}"
+
+song-title.content = "exec playerctl metadata --player=spotify,ncspot xesam:title"
+song-title.style.foreground = "${~colors.accent}"
+
+song-artist.content = "exec playerctl metadata --player=spotify,ncspot xesam:artist"
+song-artist.style.foreground = "${~colors.lavendar}"
+
+volume.content = "exec ~/scripts/audio/get-spotify-volume.py"
+volume.style.foreground = "${~colors.lavendary}"
+
+on.click-left = "playerctl --player=spotify,ncspot play-pause"
+on.click-right = "playerctl --player=spotify,ncspot next"
+on.click-middle = "playerctl --player=spotify,ncspot previous"
+on.scroll-up = "~/scripts/audio/change-spotify-volume.py +10%"
+on.scroll-down = "~/scripts/audio/change-spotify-volume.py -10%"
+update.on.all = true
+update.interval = 1
+
+style.maxlen = 30
+style.foreground = "${~colors.foreground}"
+style.background = "${~colors.background-alt}"

@@ -1,0 +1,33 @@
+[module.gap-dark]
+content = " "
+style.background = "${colors.background}"
+
+[module.gap-small]
+content = " "
+style.background = "${colors.background-alt}"
+
+[module.gap]
+content = "  "
+style.background = "${colors.background-alt}"
+
+[module.r1]
+content = ""
+style.font = "${~fonts.main-large}"
+style.background = "${colors.background}"
+style.foreground = "${colors.background-alt}"
+
+[module.l1]
+content = ""
+style.font = "${~fonts.main-large}"
+style.background = "${colors.background}"
+style.foreground = "${colors.background-alt}"
+
+[module.space]
+content = "  "
+style.background = "${~colors.background-alt}"
+style.foreground = "${~colors.foreground}"
+
+[module.sep]
+content = "|  "
+style.background = "${colors.background}"
+style.foreground = "${colors.background-alt-3}"

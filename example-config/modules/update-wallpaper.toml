@@ -1,0 +1,6 @@
+[module.update-wallpaper]
+content = ""
+style.font = "${~fonts.icons}"
+style.foreground = "${colors.blue}"
+style.background = "${colors.background-alt}"
+on.click-left = "~/scripts/wallpaper/set-wallpaper.sh $(~/scripts/wallpaper/get-wallpaper.sh)"

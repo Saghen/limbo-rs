@@ -1,0 +1,17 @@
+[module.twitch]
+name = "forsen"
+logo = "🐒"
+
+content = "exec [ 'true' = $(~/scripts/twitch/is-streaming.sh ${name}) ] && echo '${logo}'"
+style.font = "${~fonts.emoji}"
+style.foreground = "${~colors.foreground}"
+style.background = "${~colors.background-alt}"
+
+update.interval = 20
+on.click-left = "open-stream-mpv ${name}"
+on.click-right = "open-stream ${name}"
+
+[module.twitch-moon]
+inherit = "twitch"
+name = "moonmoon"
+logo = "🌛"

@@ -1,0 +1,14 @@
+# TODO: How to handle tail...
+# TODO: Supporting long running processes invoked by the modules?
+# And allowing those processes to be started for each bar or a single instance for all bars
+[module.pomodoro]
+# MAKE SURE TO RUN ~/scripts/polybar/polypomo/polypomo > /tmp/polypomo.status somewhere.
+# I put this in my bspwmrc which also starts polybar
+exec = "tail -f -n 1 /tmp/polypomo.status"
+tail = true
+
+style.foreground = "${colors.lavendar}"
+style.background = "${colors.background-alt}"
+on.click-left = "~/scripts/polybar/polypomo.py toggle"
+on.click-right = "~/scripts/polybar/polypomo.py end"
+on.click-middle = "~/scripts/polybar/polypomo.py lock"

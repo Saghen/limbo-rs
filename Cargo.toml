@@ -1,0 +1,15 @@
+[package]
+name = "limbo"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gio = "0.15.12"
+gtk = { version = "0.4.8", package = "gtk4", features = ["v4_6"] }
+glib = "0.15.12"
+toml = "0.5.9"
+nom = "7.1.1"
+async-process = "1.4.0"
+pango = { version = "0.15.10", features=["v1_50"] }

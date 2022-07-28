@@ -1,0 +1,34 @@
+[variables.colors]
+# Main bar bg color
+background = "#1E1E28"
+# Modules bg color
+background-alt = "#332E41"
+background-alt-2 = "#393348"
+background-alt-3 = "#393348"
+# main foreground color
+foreground = "#bfc9db"
+# accent color
+accent = "#A4B9EF"
+empty = "#00000000"
+
+flamingo = "#f2cdcd"
+mauve = "#DDB6F2"
+pink = "#F5C2E7"
+maroon = "#E8A2AF"
+red = "#F28FAD"
+peach = "#F8BD96"
+yellow = "#FAE3B0"
+green = "#98C379"
+teal = "#B5E8E0"
+blue = "#96CDFB"
+sky = "#89DCEB"
+lavendar = "#C9CBFF"
+
+[variables.fonts]
+main = "OperatorMono Nerd Font:size=12#2"
+main-large = "OperatorMono Nerd Font:size=13#3"
+
+icons = "Feather:style=Bold:size=12#2"
+icons-ui = "DaddyTimeMono Nerd Font:size=18#5"
+icons-idk = "FuraCode Nerd Font:size=14#2"
+emoji = "Noto Color Emoji:style=Regular:scale=10#2"

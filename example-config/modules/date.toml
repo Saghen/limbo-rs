@@ -1,0 +1,14 @@
+# Experiment with setting module state for switching between date and time on click
+# FIXME: Invalid configuration
+[module.date]
+type = "internal/date"
+date = ""
+date-alt = " %d / %m / %Y"
+time = " %a %I:%M"
+time-alt = ""
+
+content = "${date}${time}"
+style.underline = "${~colors.empty}"
+style.foreground = "${~colors.accent}"
+style.background = "${~colors.background-alt}"
+update.interval = 5

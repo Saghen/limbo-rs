@@ -1,0 +1,19 @@
+[module.internet]
+type = "internal/network"
+
+# Set by default
+# content = { disconnected: "${disconnected}", connected: "${connected}" }
+# content.switch = "${interface.connection-status}"
+
+interface.type = "wired"
+interface.name = "${interface.default}" # Use the default interface
+update.interval = 3
+
+disconnected.content = ""
+disconnected.style.font = "${~fonts.icons}"
+disconnected.style.foreground = "${~colors.red}"
+disconnected.style.background = "${~colors.background-alt}"
+connected.style.content = ""
+connected.style.foreground = "${~colors.accent}"
+connected.style.background = "${~colors.background-alt}"
+on.click-left = "gnome-control-center"

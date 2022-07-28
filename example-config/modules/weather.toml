@@ -1,0 +1,9 @@
+[module.weather]
+content = "exec ${~dirs.scripts}/openweathermap-simple.sh"
+provider = "darksky"
+api-key = "${~secrets.dark-sky-api-key}"
+weather-icon-font = "${~fonts.weather-icons}"
+
+style.foreground = "${~colors.foreground}"
+style.background = "${~colors.background-alt}"
+update.interval = 600
