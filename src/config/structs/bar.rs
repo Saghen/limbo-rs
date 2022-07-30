@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-use super::basic::{Style, Layout, Events, UpdateEvents};
+use super::primitive::{Events, Layout, Style, UpdateEvents};
 
 #[derive(Deserialize, Debug)]
 pub struct Bar {
@@ -22,5 +22,5 @@ pub struct BarModules {
     start: Vec<String>,
     middle: Vec<String>,
     end: Vec<String>,
-    style: Option<Style>
+    style: Option<Style>,
 }

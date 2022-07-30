@@ -3,7 +3,7 @@ use toml::Value;
 
 use serde::Deserialize;
 
-use super::basic::{Events, Layout, Style, UpdateEvents};
+use super::primitive::{Events, Layout, Style, UpdateEvents};
 
 #[derive(Deserialize, Debug)]
 struct Config {

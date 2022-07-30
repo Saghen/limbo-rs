@@ -1,4 +1,4 @@
-pub mod basic;
+pub mod structs;
 pub mod config;
-pub mod module;
-pub mod bar;
+
+pub use structs::*;

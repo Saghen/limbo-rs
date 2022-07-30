@@ -1,6 +1,6 @@
 include = [
   "variables.toml",
-  "modules/*.toml"
+  "modules/**/*.toml"
 ]
 
 [bar]

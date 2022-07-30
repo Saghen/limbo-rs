@@ -1,7 +1,7 @@
 use serde::Deserialize;
 use std::{collections::HashMap, fs};
 
-use super::{bar::Bar, module::Module};
+use super::{Bar, Module};
 
 #[derive(Deserialize, Debug)]
 pub struct Config {
