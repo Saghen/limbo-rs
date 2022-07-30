@@ -2,16 +2,31 @@
 name = "limbo"
 version = "0.0.1"
 edition = "2021"
+description = "Modern text-based bar for Wayland and X11"
+rust-version = "1.60.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "mylib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mybin"
+path = "src/bin.rs"
+
 [dependencies]
-gio = "0.15.12"
-gtk = { version = "0.4.8", package = "gtk4", features = ["v4_6"] }
-glib = "0.15.12"
 toml = "0.5.9"
 serde = { version = "1.0.140", features = ["derive"] }
 csscolorparser = { version = "0.6.2", features = ["serde"] }
 nom = "7.1.1"
 async-process = "1.4.0"
-pango = { version = "0.15.10", features=["v1_50"] }
+glob = "0.3.0"
+thiserror = "1.0.31"
+anyhow = "1.0.58"
+
+[target.'cfg(unix)'.dependencies]
+pango = { version = "0.15.10", features = ["v1_50"] }
+gio = "0.15.12"
+gtk = { version = "0.4.8", package = "gtk4", features = ["v4_6"] }
+glib = "0.15.12"
